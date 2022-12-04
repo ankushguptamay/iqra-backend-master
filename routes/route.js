@@ -1,12 +1,12 @@
 module.exports = (app) => {
-    const user = require('../controllers/user.js');
+    const level = require('../controllers/Levels/level-cont');
 
     const router = require('express').Router();
 
-    router.post("/add-users", user.create);
-    router.get("/users", user.findAll);
-    router.delete("/delete/:id", user.delete);
-    router.put("/update/:id", user.update);
-    app.use("/api/student", router);
+    router.post("/add-levels", level.create);
+    router.get("/levels", level.findAll);
+ 
+    
+    app.use("/api/master", router);
 
 };

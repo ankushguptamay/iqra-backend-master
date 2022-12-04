@@ -1,5 +1,5 @@
 const express = require('express');
-//const cors = require('cors');
+const cors = require('cors');
 const app = express();
 const bodyParser = require('body-parser');
 
@@ -27,10 +27,10 @@ app.get('/', (req, res) => {
     res.send('Hello World!');
 });
 
-// app.get('/cors', (req, res) => {
-//     res.set('Access-Control-Allow-Origin', '*');
-//     res.send('Hello World!');
-// });
+app.get('/cors', (req, res) => {
+    res.set('Access-Control-Allow-Origin', '*');
+    res.send('Hello World!');
+});
 
 
 // PORT = process.env.PORT || 8080;

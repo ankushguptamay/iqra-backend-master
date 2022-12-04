@@ -17,6 +17,8 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.student = require('./user.js')(sequelize, Sequelize);
+db.level = require('./Master/level')(sequelize, Sequelize);
+db.medium = require('./Master/medium')(sequelize, Sequelize);
+db.subject = require('./Master/subject')(sequelize, Sequelize);
 
 module.exports = db;
