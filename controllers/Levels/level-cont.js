@@ -2,7 +2,7 @@
 const db = require('../../models');
 const Level = db.level;
 
-exports.create = async (req, res) => {
+exports.addLevel = async (req, res) => {
     try{
         var levelCode;
         const levels = await Level.findAll();
@@ -30,7 +30,7 @@ exports.create = async (req, res) => {
     }
 }
 
-exports.findAll = async (req, res) => {
+exports.findAllLevel = async (req, res) => {
     try{
         const levels = await Level.findAll();
         res.status(200).send(levels);

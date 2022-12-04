@@ -1,7 +1,7 @@
 const db = require('../../models');
 const Medium = db.medium;
 
-exports.create = async (req, res) => {
+exports.addMedium = async (req, res) => {
     try{
         var mediumCode;
         const mediums = await Medium.findAll();
@@ -29,7 +29,7 @@ exports.create = async (req, res) => {
     }
 }
 
-exports.findAll = async (req, res) => {
+exports.findAllMedium = async (req, res) => {
     try{
         const mediums = await Medium.findAll();
         res.status(200).send(mediums);
