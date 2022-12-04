@@ -20,5 +20,6 @@ db.sequelize = sequelize;
 db.level = require('./Master/level')(sequelize, Sequelize);
 db.medium = require('./Master/medium')(sequelize, Sequelize);
 db.subject = require('./Master/subject')(sequelize, Sequelize);
+db.category = require('./Category/category')(sequelize, Sequelize);
 
 module.exports = db;
