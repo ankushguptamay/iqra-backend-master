@@ -6,7 +6,7 @@ exports.uploadCategory = async (req, res) => {
     //console.log(req.file);
 
     if (!req.file) {
-      return res.send(`You must select a file.`);
+      return res.send(`You must select a Image.`);
     }
 
     const categories = await Category.create({
