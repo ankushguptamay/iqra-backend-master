@@ -51,6 +51,7 @@ db.category = require('./newAdmin/master/category.model')(sequelize, Sequelize);
 db.course = require('./newAdmin/course.model')(sequelize, Sequelize);
 db.question = require('./newAdmin/question.model')(sequelize, Sequelize);
 db.article = require('./newAdmin/article.model')(sequelize, Sequelize);
+db.article = require('./newAdmin/editorial.model')(sequelize, Sequelize);
 
 // db.teacher.hasMany(db.student);
 // db.student.belongsTo(db.teacher);

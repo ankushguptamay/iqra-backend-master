@@ -6,6 +6,7 @@ module.exports = (app) => {
     const course = require('../../controllers/newAdmin/course.cont');
     const question = require('../../controllers/newAdmin/newquestion.cont');
     const article = require('../../controllers/newAdmin/article.cont');
+    const editorial = require('../../controllers/newAdmin/editorial.cont');
     //middleware
     const uploadImage = require('../../middleware/upload.image');
 
@@ -43,6 +44,8 @@ module.exports = (app) => {
 
     router.post("/add-articles", article.addArticle);
     router.get("/articles", article.getAllArticle);
+    router.post("/add-editorials", editorial.addEditorial);
+    router.get("/editorials", editorial.getAllEditorial);
 
     app.use("/api/master", router);
 

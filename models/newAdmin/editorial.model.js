@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const Article = sequelize.define("article", {
+    const Editorial = sequelize.define("editorial", {
         id: {
             type: DataTypes.INTEGER,
             primaryKey: true,
@@ -34,10 +34,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         answer: {
             type: DataTypes.STRING,
-        },
-        subjectMap: {
-            type: DataTypes.STRING,
         }
     })
-    return Article;
+    return Editorial;
 }

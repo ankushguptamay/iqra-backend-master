@@ -1,9 +1,9 @@
 const db = require("../../models");
-const Article = db.article;
+const Editorial = db.editorial;
 
-exports.addArticle = async (req, res) => {
+exports.addEditorial = async (req, res) => {
   try {
-    const articles = await Article.create({
+    const editorials = await Editorial.create({
       heading: req.body.heading,
       rating: req.body.rating,
       tags: req.body.tags,
@@ -13,19 +13,18 @@ exports.addArticle = async (req, res) => {
       question: req.body.question,
       questionHeading: req.body.questionHeading,
       options: req.body.options,
-      answer: req.body.answer,
-      subjectMap: req.body.subjectMap
+      answer: req.body.answer
     });
-    res.status(200).send(`Article has been uploaded. ${articles.id}`);
+    res.status(200).send(`Article has been uploaded. ${editorials.id}`);
   } catch (err) {
     res.status(500).send({ message: err.message });
   }
 };
 
-exports.getAllArticle = async (req, res) => {
+exports.getAllEditorial = async (req, res) => {
   try {
-    const articles = await Article.findAll();
-    res.status(200).send(articles);
+    const editorials = await Editorial.findAll();
+    res.status(200).send(editorials);
   } catch (err) {
     res.status(500).send({ message: err.message });
   }
