@@ -7,6 +7,7 @@ module.exports = (app) => {
     const question = require('../../controllers/newAdmin/newquestion.cont');
     const article = require('../../controllers/newAdmin/article.cont');
     const editorial = require('../../controllers/newAdmin/editorial.cont');
+    const banner = require('../../controllers/newAdmin/banner.cont');
     //middleware
     const uploadImage = require('../../middleware/upload.image');
 
@@ -46,6 +47,11 @@ module.exports = (app) => {
     router.get("/articles", article.getAllArticle);
     router.post("/add-editorials", editorial.addEditorial);
     router.get("/editorials", editorial.getAllEditorial);
+
+    router.post("/add-banners", uploadImage.single("bannerimage"), banner.addBanner);
+    router.get("/banners", banner.getAllBanner);
+    router.delete("/delete-banners/:id", banner.deleteBanner);
+    router.put("/update-banners/:id", uploadImage.single("bannerimage"), banner.updateBanner);
 
     app.use("/api/master", router);
 

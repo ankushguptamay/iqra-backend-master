@@ -15,7 +15,7 @@ exports.addEditorial = async (req, res) => {
       options: req.body.options,
       answer: req.body.answer
     });
-    res.status(200).send(`Article has been uploaded. ${editorials.id}`);
+    res.status(200).send(`Editorial has been uploaded. ${editorials.id}`);
   } catch (err) {
     res.status(500).send({ message: err.message });
   }
