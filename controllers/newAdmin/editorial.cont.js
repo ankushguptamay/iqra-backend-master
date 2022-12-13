@@ -9,7 +9,7 @@ exports.addEditorial = async (req, res) => {
       tags: req.body.tags,
       prelims: req.body.prelims,
       mains: req.body.mains,
-      dataFormEditor: req.body.dataFormEditor,
+      dataFromEditor: req.body.dataFromEditor,
       question: req.body.question,
       questionHeading: req.body.questionHeading,
       options: req.body.options,
